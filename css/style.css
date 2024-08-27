@@ -1,0 +1,1385 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('font/pretendard/Pretendard-Regular.eot');
+    src: url('font/pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('font/pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('font/pretendard/Pretendard-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('font/pretendard/Pretendard-SemiBold.eot');
+    src: url('font/pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('font/pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('font/pretendard/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('font/pretendard/Pretendard-Bold.eot');
+    src: url('font/pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('font/pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('font/pretendard/Pretendard-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    /* 10px = 1rem */
+    -webkit-text-size-adjust: none;
+    /* -webkit- 크롬, 사파리, 오페라 */
+    text-size-adjust: none;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+    font-family: 'Pretendard';
+    font-weight: normal;
+    font-size: 1.6rem;
+}
+
+main .inner {
+    max-width: 1280px;
+    width: calc(100% - 60px);
+    margin: 15rem auto;
+}
+
+.title {
+    margin-bottom: 6rem;
+}
+
+.title h3 {
+    font-size: 4.5rem;
+    font-family: 'yg-jalnan';
+}
+
+.title p {
+    font-size: 2rem;
+    margin-top: 1.3rem;
+    line-height: 1.3;
+}
+
+/********************** 헤더 **********************/
+.header {
+    height: 10.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header .inner {
+    width: calc(100% - 76px);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .inner .logo a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .inner .logo a strong {
+    font-family: 'yg-jalnan';
+    font-size: 1.9rem;
+    position: relative;
+}
+
+/* img 한테는 가상선택자가 적용되지 않기 때문에 비포한테 적용한다. */
+.header .inner .logo a strong::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+}
+
+.header .inner .nav {}
+
+.header .inner .nav .gnb {
+    display: flex;
+}
+
+.header .inner .nav .gnb li {}
+
+.header .inner .nav .gnb li a {
+    padding: 2rem 5rem;
+    /* 클릭 영역을 넓혀주기 위해 a한테 좌우 넓이를 주는 것이 좋다. */
+    position: relative;
+}
+
+.header .inner .nav .gnb li a::before {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.header .inner .nav .gnb li:first-child a::before {
+    display: none;
+}
+
+.header .inner .header_menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.header .inner .header_menu strong {
+    font-weight: normal;
+    position: relative;
+}
+
+.header .inner .header_menu strong a {}
+
+.header .inner .header_menu strong::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 14px;
+    background: url(../img/icon-home.svg) center center / 100% no-repeat;
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+}
+
+.header .inner .header_menu .all_menu {}
+
+
+/****** .main_title ******/
+.main_title {}
+
+.main_title .inner {
+    margin: 11.5rem auto 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'yg-jalnan';
+}
+
+.main_title .inner .title_text {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.main_title .inner .title_text h2 {
+    font-size: 7rem;
+}
+
+.main_title .inner .title_text h2 span {
+    color: #4478ff;
+}
+
+.main_title .inner .title_text img {}
+
+.main_title .inner .main_btn {}
+
+.main_title .inner .main_btn a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main_title .inner .main_btn a span {
+    font-size: 2.4rem;
+}
+
+.main_title .inner .main_btn a img {}
+
+
+.main_visual {}
+
+.main_visual .mainSwiper {}
+
+.main_visual .mainSwiper .swiper-wrapper {}
+
+.main_visual .mainSwiper .swiper-wrapper .swiper-slide {
+    /* width: 48%; */
+    width: 836px;
+    height: 395px;
+    margin: 30px 5rem;
+    transition: 0.5s;
+}
+
+.main_visual .mainSwiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+}
+
+.main_visual .mainSwiper .swiper-btn {
+    width: 836px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+
+.main_visual .swiper-button-next,
+.main_visual .swiper-button-prev {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: url(../img/slide-next-btn.svg) center center / 22px no-repeat #fff;
+    /* 백그라운드 컬러 값을 백그라운드 속성 안에 넣거나 아래에 넣어야 적용된다. */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    right: -40px;
+}
+
+.main_visual .swiper-button-prev {
+    background: url(../img/slide-prev-btn.svg)center center / 22px no-repeat #fff;
+    left: -40px;
+}
+
+.main_visual .swiper-button-next:hover,
+.main_visual .swiper-button-prev:hover {
+    border: 1px solid #4478ff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+}
+
+.main_visual .swiper-button-next::after,
+.main_visual .swiper-button-prev::after {
+    display: none;
+}
+
+.main_visual .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+}
+
+.main_visual .swiper-pagination-bullet-active {
+    width: 43px;
+    color: #4478ff;
+    border-radius: 50px;
+}
+
+.main_visual .swiper-pagination {
+    bottom: 0;
+}
+
+.main_visual .visual-play div {
+    width: 14px;
+    height: 14px;
+    background: url(../img/visual-stop-btn.svg) center center / 11px no-repeat;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+}
+.main_visual .visual-play .visual-stop
+
+/****** program ******/
+
+.program {}
+
+.program .inner {
+    position: relative;
+}
+
+.program .inner .title_btn {
+    width: 56.87%;
+    /* 728 - 1280 *100 */
+    display: flex;
+    justify-content: space-between;
+}
+
+.program .inner .title_btn .title {}
+
+.program .inner .title_btn .title h3 {}
+
+.program .inner .title_btn .title a {}
+
+.program .inner .title_btn .title a img {}
+
+.program .inner .title_btn .cont_btn {
+    width: 43px;
+    height: 43px;
+    transition: 0.5s;
+}
+
+.program .inner .title_btn .cont_btn:hover {
+    transform: rotate(180deg);
+}
+
+.program .inner .title_btn .cont_btn img {}
+
+.program .inner .list {}
+
+.program .inner .list .item_wrap {
+    width: 56.87%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.program .inner .list .item_wrap .item {
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0, 15, 67, 0.2);
+    padding: 3rem 3.5rem;
+    border: 1px solid #fff;
+    transition: 0.5s;
+}
+
+.program .inner .list .item_wrap .item:hover {
+    border: 1px solid #4478ff;
+}
+
+.program .inner .list .item_wrap .item a {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.program .inner .list .item_wrap .item a span {
+    width: 80px;
+    height: 80px;
+    background-color: #4478ff;
+    color: #fff;
+    border-radius: 50%;
+    font-family: 'yg-jalnan';
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.program .inner .list .item_wrap .item a .finished {
+    background-color: #c1c6d0;
+}
+
+.program .inner .list .item_wrap .item a .item_info {
+    width: calc(100% - 80px - 30px);
+}
+
+.program .inner .list .item_wrap .item a .item_info h4 {
+    font-size: 2.6rem;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.program .inner .list .item_wrap .item a .item_info ul {
+    display: flex;
+    column-gap: 28px;
+    flex-wrap: wrap;
+}
+
+.program .inner .list .item_wrap .item a .item_info ul li {
+    position: relative;
+    padding-left: 25px;
+    line-height: 1.5;
+}
+
+.program .inner .list .item_wrap .item a .item_info ul li.date::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: url(../img/icon-date.svg) center center / 100% no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.program .inner .list .item_wrap .item a .item_info ul li.date::after {
+    content: '';
+    width: 1px;
+    height: 13px;
+    background-color: #666;
+    position: absolute;
+    top: 50%;
+    right: -14px;
+    transform: translateY(-50%);
+}
+
+.program .inner .list .item_wrap .item a .item_info ul li.place::before {
+    content: '';
+    width: 15px;
+    height: 18px;
+    background: url(../img/icon-place.svg) center center / 100% no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.program .inner .list .item_image {
+    width: 34.84%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.25);
+    transition: 0.5s;
+}
+
+.program .inner .list .item_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* 이미지 태그 밑에 흰 여백이 생길 때 디스플레이 블럭 */
+}
+
+/* 만약 좌측 item_info크기만 %로 변경되게 해주고
+우측 이미지 넓이 값을 픽셀로 고정하고 
+특정 화면 사이즈 아래로 떨어질 때에만 줄어들게 하고싶다면 
+좌측 넓이 값을 calc(100% - 우측 이미지 크기px - 여백 값px)
+줄어드는 값은 media screen으로 적용 */
+
+
+
+/****** recipe ******/
+
+.recipe {}
+.recipe .inner {
+    margin-bottom: 20rem;
+}
+
+.recipe .title {
+    text-align: center;
+}
+
+.recipe .title h3 {}
+
+.recipe .title p {}
+
+.recipe .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe .list .recipe_slide {
+    width: 48.43%;
+    max-height: 620px;
+    height: 48.43vw;
+    background-color: #ff8515;
+    border-radius: 25px;
+    color: #fff;
+    font-family: 'yg-jalnan';
+    position: relative;
+    transition: 0.5s;
+}
+
+.recipe .list .recipe_slide::before {
+    content: '';
+    display: block;
+    background-color: #ff6b00;
+    border-radius: 0 0 25px 25px;
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.recipe .list .recipe_slide .recipeSwiper {
+    height: 100%;
+    position: static;
+}
+
+.recipe .list .recipe_slide .recipeSwiper .swiper-wrapper {
+    transform: none !important;
+    position: static;
+}
+
+.recipe .list .recipe_slide .recipeSwiper .swiper-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: none !important;
+    opacity: 0 !important;
+    padding: 10rem 6rem;
+}
+
+/* 스와이프 슬라이드에 슬라이드 위치가 변경되며 좌우 슬라이드가 넘어가게끔 기본적으로 잡혀있는 트랜스폼 때문에 css에서 작성하는 값이 적용되지 않으니 transform: none !important로 없애주고 오파시티로 넘어가게 해 준다. 
+그리고 각 영역에 잡혀있는 포지션들을 스태틱으로 제거해줘서 이미지가 트랜스폼이 적용되게끔 해 준다.*/
+.recipe .list .recipe_slide .recipeSwiper .swiper-slide.swiper-slide-active {
+    opacity: 1 !important;
+}
+
+.recipe .list .recipe_slide .recipeSwiper .swiper-slide span {
+    font-size: 22px;
+    background-color: #bd4f00;
+    padding: 1rem 2rem;
+    border-radius: 40px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.recipe .list .recipe_slide .recipeSwiper .swiper-slide h4 {
+    font-size: 4.5rem;
+    word-break: keep-all;
+    line-height: 1.3;
+}
+
+.recipe .list .recipe_slide .recipeSwiper .swiper-slide figure {
+    /* text-align: right;
+    transform: translateY(20%); 
+    이렇게 위치를 변경시키면 위에 작성되는 요소들의 넓이값에 따라서 위치가 점점 변경되기 때문에 포지션으로 위치를 잡아준다. */
+    position: absolute;
+    right: 0;
+    bottom: -12.9%;
+    width: 70.64%;
+    /* 438(피규어 넓이) / 620(슬라이드 컨테이너의 넓이) * 100 */
+}
+
+.recipe .list .recipe_slide .recipeSwiper .swiper-slide figure img {
+    width: 100%;
+}
+
+.recipeSwiper .swiper-button-next,
+.recipeSwiper .swiper-button-prev {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: url(../img/slide-next-btn-w.svg) center center / 15px no-repeat;
+    top: auto;
+    bottom: 160px;
+    transition: 0.3s;
+}
+
+.recipeSwiper .swiper-button-prev {
+    background: url(../img/slide-prev-btn-w.svg) center center / 15px no-repeat;
+    left: 60px;
+}
+
+.recipeSwiper .swiper-button-next {
+    right: auto;
+    left: 130px;
+}
+
+.recipeSwiper .swiper-button-next::after,
+.recipeSwiper .swiper-button-prev::after {
+    display: none;
+}
+
+.recipeSwiper .swiper-button-prev:hover {
+    background: url(../img/slide-prev-btn.svg) center center / 15px no-repeat;
+    background-color: #fff;
+}
+
+.recipeSwiper .swiper-button-next:hover {
+    background: url(../img/slide-next-btn.svg) center center / 15px no-repeat;
+    background-color: #fff;
+}
+
+.recipe .swiper-play div {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: absolute;
+    left: 200px;
+    bottom: 160px;
+    background: url(../img/slide-stop-btn.svg) center center / 11px no-repeat;
+}
+.recipe .swiper-play div.swiper-start {
+    background: url(../img/slide-play-btn.svg) center center / 11px no-repeat;
+    display: none;
+}
+
+.recipe .list .item_wrap {
+    width: 48.43%;
+    max-height: 620px;
+    height: 48.43vw;
+    display: flex;
+    justify-content: space-between;
+    /* 수평정렬 */
+    flex-wrap: wrap;
+    align-content: space-between;
+    /* 수직정렬 */
+    transition: 0.5s;
+}
+
+.recipe .list .item_wrap .item {
+    width: 47.74%;
+    max-height: 296px;
+    height: 23.12vw;
+    /* 296 / 1280 * 100 */
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+.recipe .list .item_wrap .item a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.recipe .list .item_wrap .item a figure {
+    height: 100%;
+    width: 100%;
+}
+
+.recipe .list .item_wrap .item a figure img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.recipe .list .item_wrap .item a h4 {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    line-height: 1.4;
+    font-size: 18px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 40%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.recipe .list .item_wrap .item:hover a h4 {
+    opacity: 1;
+}
+
+
+/****** news ******/
+
+.news {}
+
+.news .inner {
+    margin-bottom: 0;
+}
+
+.news .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news .title h3 {}
+
+.news .title ul {
+    display: flex;
+    gap: 45px;
+}
+
+.news .title ul li {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #999;
+    position: relative;
+}
+
+.news .title ul li:first-child {
+    color: #333;
+}
+
+.news .title ul li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
+}
+
+.news .title ul li:first-child::before {
+    width: 20px;
+    height: 20px;
+    left: -26px;
+    background: url(../img/icon-check.svg) center center / 100% no-repeat;
+}
+
+.news .news_list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.news .news_list li {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    padding: 3rem 5rem;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    transition: 0.5s;
+}
+
+.news .news_list li:hover {
+    border: 1px solid #4478ff;
+}
+
+.news .news_list li>a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news .news_list li>a div {
+    display: flex;
+    column-gap: 45px;
+    width: 80%;
+}
+
+.news .news_list li>a div b {
+    color: #ff8a00;
+    font-size: 1.8rem;
+    width: 70px;
+}
+
+.news .news_list li>a div .notice {
+    color: #4478ff;
+}
+
+.news .news_list li>a div h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: calc(100% - 70px - 45px);
+}
+
+.news .news_list li>a span {
+    color: #444;
+    font-size: 1.8rem;
+    display: block;
+    width: 15%;
+    text-align: right;
+}
+
+
+/****** sns ******/
+
+.sns {
+    margin: 9rem 0;
+}
+
+.sns ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sns ul li {
+    width: 53px;
+    height: 53px;
+    background-color: #142143;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.sns ul li:hover {
+    background-color: #4478ff;
+}
+
+.sns ul li a {}
+
+.sns ul li a img {}
+
+
+/****** footer ******/
+
+.footer {
+    background-color: #142143;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 3rem;
+    font-size: 15px;
+}
+
+.footer .footer_logo {}
+
+.footer .footer_logo a {}
+
+.footer .footer_menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 35px;
+    margin: 30px 0 5px;
+}
+
+.footer .footer_menu li {
+    position: relative;
+}
+
+.footer .footer_menu li:not(:first-child)::before {
+    content: '';
+    width: 1px;
+    height: 11px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer .footer_menu li:first-child {
+    color: #8ac0ff;
+    font-weight: bold;
+}
+
+.footer .footer_menu li a {}
+
+.footer .address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 36px;
+    line-height: 1.5;
+}
+
+.footer .address li {
+    position: relative;
+}
+
+.footer .address li:not(:first-child)::before {
+    content: '';
+    width: 1px;
+    height: 11px;
+    background-color: rgba(250, 250, 250, 0.5);
+    position: absolute;
+    left: -18.5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+/* 1024 ~ 768 => 태블릿 */
+/* 767 ~ 481 => 태블릿 / 모바일 */
+/* 480 ~ 320 => 모바일 */
+/* 1024 / 767 / 480 */
+/* 본인의 중단점을 잡아서 하면 됨
+1024 960 767 640 540 480 414 380 */
+
+
+@media screen and (max-width:1250px) {
+    .header .inner .nav {
+        display: none;
+    }
+}
+
+/* 1250 */
+
+@media screen and (max-width:1109px) {
+    .footer .address li:nth-child(3)::before {
+        display: none;
+    }
+}
+
+/* 1109 */
+
+@media screen and (max-width:1024px) {
+    html {
+        font-size: 50%;
+        /* 8px */
+    }
+
+    .header .inner {
+        width: calc(100% - 60px);
+    }
+
+    .header .inner .logo a strong {
+        font-size: 2.12rem;
+        /* 17(만들고자 하는 크기) * 8(지정된 폰트 사이즈) = 2.12rem */
+    }
+
+    .header .inner .header_menu strong a {
+        font-size: 1.75rem;
+    }
+
+    .main_title .inner .title_text img {
+        width: 22.5rem;
+        /* 180 * 8 = 22.5rem */
+    }
+
+    .program .inner .list .item_wrap .item a span {
+        font-size: 2.25rem;
+    }
+
+    .program .inner .list .item_wrap .item a .item_info ul li {
+        font-size: 2rem;
+    }
+
+    .program .inner .list .item_wrap .item a .item_info ul li.date::after {
+        display: none;
+    }
+
+    .recipe .list .item_wrap .item a h4 {
+        opacity: 1;
+    }
+
+    .news .news_list li>a div b {
+        font-size: 2.25rem;
+    }
+
+    .news .news_list li>a div h4 {
+        font-size: 2.25rem;
+    }
+
+    .news .news_list li>a span {
+        font-size: 2.25rem;
+    }
+}
+
+/* 1024 */
+
+@media screen and (max-width:960px) {
+    .main_title .inner {
+        display: block;
+    }
+
+    .main_title .inner .title_text {
+        margin-bottom: 30px;
+    }
+
+    .main_visual .mainSwiper .swiper-wrapper .swiper-slide {
+        width: 683px;
+        height: 320px;
+    }
+
+    .main_visual .mainSwiper .swiper-btn {
+        width: 683px;
+    }
+
+    .main_visual .swiper-button-next,
+    .main_visual .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        background-size: 13px;
+        right: -25px;
+    }
+
+    .main_visual .swiper-button-prev {
+        left: -25px;
+    }
+
+    .program .inner {
+        position: static;
+    }
+
+    .program .inner .title_btn {
+        width: 65.88%;
+    }
+
+    .program .inner .list {
+        position: relative;
+    }
+
+    .program .inner .list .item_wrap {
+        width: 65.88%;
+        gap: 24px;
+    }
+
+    .program .inner .list .item_image {
+        width: 31.88%;
+        bottom: auto;
+        top: 0;
+    }
+
+    /* .program .inner .list .item_wrap .item {
+        padding: 24px 28px;
+    } */
+    .program .inner .list .item_wrap .item a {
+        gap: 15px;
+    }
+
+    .program .inner .list .item_wrap .item a .item_info ul {
+        flex-direction: column;
+    }
+
+    .recipe .list .recipe_slide {
+        width: 65.88%;
+        height: 61.77vw;
+    }
+    .recipe .list .recipe_slide .recipeSwiper .swiper-slide h4 {
+        font-size: 5.62rem;
+    }
+    .recipe .list .item_wrap {
+        width: 31.88%;
+        height: auto;
+    }
+
+    .recipe .list .item_wrap .item {
+        width: 100%;
+        max-height: 287px;
+        height: 29.89vw;
+    }
+
+    .recipe .list .item_wrap .item:nth-child(2)~.item {
+        display: none;
+    }
+}
+
+/* 960 */
+
+
+@media screen and (max-width:767px) {
+    .main_visual .mainSwiper .swiper-wrapper .swiper-slide {
+        width: calc(100% - 60px);
+        height: 43.58vw;
+    }.main_visual .mainSwiper .swiper-btn {
+        width: calc(100% - 60px);
+    }
+    .program .inner .title_btn {
+        width: 100%;
+    }
+    .program .inner .list .item_wrap {
+        width: 100%;
+    }
+    .program .inner .list .item_image {
+        display: none;
+    }
+    .program .inner .list .item_wrap .item a .item_info h4 {
+        margin: 0;
+    }
+    .program .inner .list .item_wrap .item a .item_info ul {
+        display: none;
+    }
+    .recipe .list {
+        flex-direction: column;
+        gap: 11vw;
+    }
+    .recipe .list .recipe_slide {
+        width: 100%;
+        height: 92vw;
+        margin-bottom: 
+    }
+    .recipe .list .recipe_slide::before {
+        height: 70px;
+    }
+    .recipe .list .recipe_slide .recipeSwiper .swiper-slide {
+        padding: 5rem;
+    }
+    .recipeSwiper .swiper-button-next, .recipeSwiper .swiper-button-prev {
+        width: 35px;
+        height: 35px;
+        background-size: 9px;
+        bottom: 93px;
+    }
+    .recipeSwiper .swiper-button-prev {
+        left: 30px;
+    }
+    .recipeSwiper .swiper-button-next {
+        left: 72px;
+    }
+    .recipeSwiper .swiper-button-next:hover , 
+    .recipeSwiper .swiper-button-prev:hover {
+        background-size: 9px;
+    }
+    .recipe .swiper-play div {
+        width: 35px;
+        height: 35px;
+        background-size: 8px;
+        bottom: 93px;
+        left: 114px;
+    }
+    .recipe .list .item_wrap {
+        width: 100%;
+    }
+    .recipe .list .item_wrap .item {
+        width: 48.5%;
+        max-height: 343px;
+        height: 44.71vw;
+    }
+    .news .title {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .news .title h3 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .news .title ul {
+        margin-left: 30px;
+    }
+    
+}/* 767 */
+
+
+@media screen and (max-width:640px) {
+    .main_title .inner .title_text {
+        margin-bottom: 10px;
+    }
+    .main_title .inner .title_text h2 {
+        font-size: 3.75rem;
+    }
+    .main_title .inner .title_text img {
+        width: 15.75rem;
+        /* 126 / 8 */
+    }
+    .main_title .inner .main_btn a {
+        gap: 7px;
+    }
+    .main_title .inner .main_btn a span {
+        font-size: 1.87rem;
+    }
+    .main_title .inner .main_btn a img {
+        /* width: 20px;
+        height: 20px; */
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .main_visual .swiper-button-next, .main_visual .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+        background-size: 9px;
+        right: -15px;
+    }
+    .main_visual .swiper-button-prev {
+        left: -15px;
+    }
+    .news .news_list li {
+        /* padding: 20px 30px; */
+    }
+    .news .news_list li>a {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .news .news_list li>a div {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+    .news .news_list li>a div h4 {
+        width: 100%;
+    }
+
+}/* 640 */
+@media screen and (max-width:605px) {
+    .footer .address li::before {
+        display: none;
+    }
+} 
+@media screen and (max-width:480px) {
+    html {
+        font-size: 37.5%;
+        /* 6px */
+    }
+    main .inner {
+        width: calc(100% - 30px);
+    }
+    .header .inner {
+        width: calc(100% - 30px);
+    }
+    .header .inner .logo a strong {
+        font-size: 2.83rem;
+    }
+    .header .inner .header_menu strong {
+        display: none;
+    }
+    .main_title .inner {
+        margin: 7.33rem auto 0;
+    }
+    .main_title .inner .title_text h2 {
+        font-size: 5rem;
+    }
+    .main_title .inner .title_text img {
+        width: 34.76%;
+    }
+    .main_title .inner .main_btn a span {
+        font-size: 3rem;
+    }
+    .main_title .inner .main_btn a img {
+        width: 3.33rem;
+        height: 3.33rem;
+    }
+    .main_visual .mainSwiper .swiper-wrapper .swiper-slide {
+        width: calc(100% - 30px);
+        height: 43.58vw;
+    }.main_visual .mainSwiper .swiper-btn {
+        width: calc(100% - 30px);
+    }
+    .main_visual .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+    .main_visual .swiper-pagination-bullet-active {
+        width: 20px;
+    }
+    .title p {
+        font-size: 2.33rem;
+    }
+    .program .inner .title_btn .cont_btn {
+        width: 33px;
+        height: 33px;
+    }
+    .program .inner .title_btn .cont_btn img {
+        width: 100%;
+    }
+    .program .inner .list .item_wrap {
+        gap: 3.33rem;
+    }
+    .program .inner .list .item_wrap .item {
+        padding: 3rem 3.33rem;
+    }
+    .program .inner .list .item_wrap .item a {
+        gap: 10px;
+    }
+    .program .inner .list .item_wrap .item a span {
+        font-size: 3rem;
+        width: 64px;
+        height: 64px;
+    }
+    .program .inner .list .item_wrap .item a .item_info {
+        width: calc(100% - 10.66rem - 10px);
+    }
+    .program .inner .list .item_wrap .item a .item_info h4 {
+        font-size: 3rem;
+    }
+    
+    .recipe .list .recipe_slide .recipeSwiper .swiper-slide span {
+        font-size: 2.5rem;
+    }
+    .recipe .list .recipe_slide .recipeSwiper .swiper-slide h4 {
+        font-size: 4rem;
+    }
+    .recipe .list .recipe_slide .recipeSwiper .swiper-slide {
+        padding: 9rem 5.83rem;
+    }
+    .recipeSwiper .swiper-button-prev {
+        left: 35px;
+    }
+    .recipeSwiper .swiper-button-next {
+        left: 77px;
+    }
+    .recipeSwiper .swiper-button-next:hover , 
+    .recipeSwiper .swiper-button-prev:hover {
+        background-size: 9px;
+    }
+    .recipe .swiper-play div {
+        left: 119px;
+    }
+    .recipe .list .item_wrap .item a h4 {
+        font-size: 2.5rem;
+    }
+
+    .news .title ul {
+        gap: 27px;
+    }
+    .news .title ul li {
+        font-size: 2.5rem;
+    }
+    .news .title ul li::before {
+        left: -15px;
+    }
+    .news .title ul li:first-child::before {
+        width: 17px;
+        height: 17px;
+        left: -27px;
+    }
+    .news .news_list {
+        gap: 10px;
+    }
+    .news .news_list li>a div b {
+        font-size: 2.5rem;
+    }
+    .news .news_list li>a div h4 {
+        font-size: 2.66rem;
+    }
+    .news .news_list li>a span {
+        font-size: 2.5rem;
+    }
+
+    .sns ul li {
+        width: 43px;
+        height: 43px;
+    }
+    .sns ul li a img {
+        transform: scale(80%);
+    }
+
+    .footer .footer_menu {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .footer .footer_menu li::before {
+        display: none;
+    }
+}/* 480 */
+
+@media screen and (max-width:390px) {
+    .header .inner .logo a strong {
+        font-size: 2.66rem;
+    }
+    .main_title .inner .title_text h2 {
+        font-size: 4.16rem;
+    }
+    .program .inner .list .item_wrap {
+        gap: 2.5rem;
+    }
+    .program .inner .list .item_wrap .item a span {
+        font-size: 2.66rem;
+        width: 60px;
+        height: 60px;
+    }
+    .recipe .list .item_wrap .item a h4 {
+        padding-bottom: 15px;
+    }
+}
