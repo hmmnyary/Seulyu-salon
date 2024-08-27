@@ -58,9 +58,7 @@ a {
 
 html {
     font-size: 62.5%;
-    /* 10px = 1rem */
     -webkit-text-size-adjust: none;
-    /* -webkit- 크롬, 사파리, 오페라 */
     text-size-adjust: none;
 }
 
@@ -93,7 +91,8 @@ main .inner {
     line-height: 1.3;
 }
 
-/********************** 헤더 **********************/
+/********************** .header **********************/
+
 .header {
     height: 10.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -120,7 +119,6 @@ main .inner {
     position: relative;
 }
 
-/* img 한테는 가상선택자가 적용되지 않기 때문에 비포한테 적용한다. */
 .header .inner .logo a strong::before {
     content: '';
     display: block;
@@ -133,17 +131,12 @@ main .inner {
     transform: translateY(-50%);
 }
 
-.header .inner .nav {}
-
 .header .inner .nav .gnb {
     display: flex;
 }
 
-.header .inner .nav .gnb li {}
-
 .header .inner .nav .gnb li a {
     padding: 2rem 5rem;
-    /* 클릭 영역을 넓혀주기 위해 a한테 좌우 넓이를 주는 것이 좋다. */
     position: relative;
 }
 
@@ -175,8 +168,6 @@ main .inner {
     position: relative;
 }
 
-.header .inner .header_menu strong a {}
-
 .header .inner .header_menu strong::before {
     content: '';
     display: block;
@@ -189,11 +180,7 @@ main .inner {
     transform: translateY(-50%);
 }
 
-.header .inner .header_menu .all_menu {}
-
-
-/****** .main_title ******/
-.main_title {}
+/********************** .main_title **********************/
 
 .main_title .inner {
     margin: 11.5rem auto 10rem;
@@ -217,10 +204,6 @@ main .inner {
     color: #4478ff;
 }
 
-.main_title .inner .title_text img {}
-
-.main_title .inner .main_btn {}
-
 .main_title .inner .main_btn a {
     display: flex;
     align-items: center;
@@ -231,17 +214,7 @@ main .inner {
     font-size: 2.4rem;
 }
 
-.main_title .inner .main_btn a img {}
-
-
-.main_visual {}
-
-.main_visual .mainSwiper {}
-
-.main_visual .mainSwiper .swiper-wrapper {}
-
 .main_visual .mainSwiper .swiper-wrapper .swiper-slide {
-    /* width: 48%; */
     width: 836px;
     height: 395px;
     margin: 30px 5rem;
@@ -272,7 +245,6 @@ main .inner {
     height: 80px;
     border-radius: 50%;
     background: url(../img/slide-next-btn.svg) center center / 22px no-repeat #fff;
-    /* 백그라운드 컬러 값을 백그라운드 속성 안에 넣거나 아래에 넣어야 적용된다. */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
     right: -40px;
 }
@@ -309,19 +281,9 @@ main .inner {
     bottom: 0;
 }
 
-.main_visual .visual-play div {
-    width: 14px;
-    height: 14px;
-    background: url(../img/visual-stop-btn.svg) center center / 11px no-repeat;
-    position: absolute;
-    bottom: 2px;
-    left: 0;
-}
-.main_visual .visual-play .visual-stop
 
-/****** program ******/
+/********************** .program **********************/
 
-.program {}
 
 .program .inner {
     position: relative;
@@ -329,18 +291,9 @@ main .inner {
 
 .program .inner .title_btn {
     width: 56.87%;
-    /* 728 - 1280 *100 */
     display: flex;
     justify-content: space-between;
 }
-
-.program .inner .title_btn .title {}
-
-.program .inner .title_btn .title h3 {}
-
-.program .inner .title_btn .title a {}
-
-.program .inner .title_btn .title a img {}
 
 .program .inner .title_btn .cont_btn {
     width: 43px;
@@ -351,10 +304,6 @@ main .inner {
 .program .inner .title_btn .cont_btn:hover {
     transform: rotate(180deg);
 }
-
-.program .inner .title_btn .cont_btn img {}
-
-.program .inner .list {}
 
 .program .inner .list .item_wrap {
     width: 56.87%;
@@ -472,20 +421,12 @@ main .inner {
     height: 100%;
     object-fit: cover;
     display: block;
-    /* 이미지 태그 밑에 흰 여백이 생길 때 디스플레이 블럭 */
 }
 
-/* 만약 좌측 item_info크기만 %로 변경되게 해주고
-우측 이미지 넓이 값을 픽셀로 고정하고 
-특정 화면 사이즈 아래로 떨어질 때에만 줄어들게 하고싶다면 
-좌측 넓이 값을 calc(100% - 우측 이미지 크기px - 여백 값px)
-줄어드는 값은 media screen으로 적용 */
+
+/********************** .recipe **********************/
 
 
-
-/****** recipe ******/
-
-.recipe {}
 .recipe .inner {
     margin-bottom: 20rem;
 }
@@ -493,10 +434,6 @@ main .inner {
 .recipe .title {
     text-align: center;
 }
-
-.recipe .title h3 {}
-
-.recipe .title p {}
 
 .recipe .list {
     display: flex;
@@ -546,8 +483,6 @@ main .inner {
     padding: 10rem 6rem;
 }
 
-/* 스와이프 슬라이드에 슬라이드 위치가 변경되며 좌우 슬라이드가 넘어가게끔 기본적으로 잡혀있는 트랜스폼 때문에 css에서 작성하는 값이 적용되지 않으니 transform: none !important로 없애주고 오파시티로 넘어가게 해 준다. 
-그리고 각 영역에 잡혀있는 포지션들을 스태틱으로 제거해줘서 이미지가 트랜스폼이 적용되게끔 해 준다.*/
 .recipe .list .recipe_slide .recipeSwiper .swiper-slide.swiper-slide-active {
     opacity: 1 !important;
 }
@@ -568,14 +503,10 @@ main .inner {
 }
 
 .recipe .list .recipe_slide .recipeSwiper .swiper-slide figure {
-    /* text-align: right;
-    transform: translateY(20%); 
-    이렇게 위치를 변경시키면 위에 작성되는 요소들의 넓이값에 따라서 위치가 점점 변경되기 때문에 포지션으로 위치를 잡아준다. */
     position: absolute;
     right: 0;
     bottom: -12.9%;
     width: 70.64%;
-    /* 438(피규어 넓이) / 620(슬라이드 컨테이너의 넓이) * 100 */
 }
 
 .recipe .list .recipe_slide .recipeSwiper .swiper-slide figure img {
@@ -603,7 +534,6 @@ main .inner {
     right: auto;
     left: 130px;
 }
-
 .recipeSwiper .swiper-button-next::after,
 .recipeSwiper .swiper-button-prev::after {
     display: none;
@@ -629,6 +559,7 @@ main .inner {
     bottom: 160px;
     background: url(../img/slide-stop-btn.svg) center center / 11px no-repeat;
 }
+
 .recipe .swiper-play div.swiper-start {
     background: url(../img/slide-play-btn.svg) center center / 11px no-repeat;
     display: none;
@@ -640,10 +571,8 @@ main .inner {
     height: 48.43vw;
     display: flex;
     justify-content: space-between;
-    /* 수평정렬 */
     flex-wrap: wrap;
     align-content: space-between;
-    /* 수직정렬 */
     transition: 0.5s;
 }
 
@@ -651,7 +580,6 @@ main .inner {
     width: 47.74%;
     max-height: 296px;
     height: 23.12vw;
-    /* 296 / 1280 * 100 */
     border-radius: 25px;
     overflow: hidden;
     position: relative;
@@ -700,9 +628,8 @@ main .inner {
 }
 
 
-/****** news ******/
+/********************** .news **********************/
 
-.news {}
 
 .news .inner {
     margin-bottom: 0;
@@ -713,8 +640,6 @@ main .inner {
     justify-content: space-between;
     align-items: center;
 }
-
-.news .title h3 {}
 
 .news .title ul {
     display: flex;
@@ -808,7 +733,7 @@ main .inner {
 }
 
 
-/****** sns ******/
+/********************** .sns **********************/
 
 .sns {
     margin: 9rem 0;
@@ -835,12 +760,7 @@ main .inner {
     background-color: #4478ff;
 }
 
-.sns ul li a {}
-
-.sns ul li a img {}
-
-
-/****** footer ******/
+/********************** .footer **********************/
 
 .footer {
     background-color: #142143;
@@ -849,10 +769,6 @@ main .inner {
     padding: 5rem 3rem;
     font-size: 15px;
 }
-
-.footer .footer_logo {}
-
-.footer .footer_logo a {}
 
 .footer .footer_menu {
     display: flex;
@@ -882,8 +798,6 @@ main .inner {
     font-weight: bold;
 }
 
-.footer .footer_menu li a {}
-
 .footer .address {
     display: flex;
     flex-wrap: wrap;
@@ -909,62 +823,45 @@ main .inner {
 
 
 
-/* 1024 ~ 768 => 태블릿 */
-/* 767 ~ 481 => 태블릿 / 모바일 */
-/* 480 ~ 320 => 모바일 */
-/* 1024 / 767 / 480 */
-/* 본인의 중단점을 잡아서 하면 됨
-1024 960 767 640 540 480 414 380 */
-
-
 @media screen and (max-width:1250px) {
     .header .inner .nav {
         display: none;
     }
-}
+}/* 1250 */
 
-/* 1250 */
 
 @media screen and (max-width:1109px) {
     .footer .address li:nth-child(3)::before {
         display: none;
     }
-}
+}/* 1109 */
 
-/* 1109 */
 
 @media screen and (max-width:1024px) {
     html {
         font-size: 50%;
-        /* 8px */
     }
 
     .header .inner {
         width: calc(100% - 60px);
     }
-
     .header .inner .logo a strong {
         font-size: 2.12rem;
-        /* 17(만들고자 하는 크기) * 8(지정된 폰트 사이즈) = 2.12rem */
     }
-
     .header .inner .header_menu strong a {
         font-size: 1.75rem;
     }
 
     .main_title .inner .title_text img {
         width: 22.5rem;
-        /* 180 * 8 = 22.5rem */
     }
 
     .program .inner .list .item_wrap .item a span {
         font-size: 2.25rem;
     }
-
     .program .inner .list .item_wrap .item a .item_info ul li {
         font-size: 2rem;
     }
-
     .program .inner .list .item_wrap .item a .item_info ul li.date::after {
         display: none;
     }
@@ -976,36 +873,29 @@ main .inner {
     .news .news_list li>a div b {
         font-size: 2.25rem;
     }
-
     .news .news_list li>a div h4 {
         font-size: 2.25rem;
     }
-
     .news .news_list li>a span {
         font-size: 2.25rem;
     }
-}
+}/* 1024 */
 
-/* 1024 */
 
 @media screen and (max-width:960px) {
     .main_title .inner {
         display: block;
     }
-
     .main_title .inner .title_text {
         margin-bottom: 30px;
     }
-
     .main_visual .mainSwiper .swiper-wrapper .swiper-slide {
         width: 683px;
         height: 320px;
     }
-
     .main_visual .mainSwiper .swiper-btn {
         width: 683px;
     }
-
     .main_visual .swiper-button-next,
     .main_visual .swiper-button-prev {
         width: 50px;
@@ -1013,7 +903,6 @@ main .inner {
         background-size: 13px;
         right: -25px;
     }
-
     .main_visual .swiper-button-prev {
         left: -25px;
     }
@@ -1021,33 +910,24 @@ main .inner {
     .program .inner {
         position: static;
     }
-
     .program .inner .title_btn {
         width: 65.88%;
     }
-
     .program .inner .list {
         position: relative;
     }
-
     .program .inner .list .item_wrap {
         width: 65.88%;
         gap: 24px;
     }
-
     .program .inner .list .item_image {
         width: 31.88%;
         bottom: auto;
         top: 0;
     }
-
-    /* .program .inner .list .item_wrap .item {
-        padding: 24px 28px;
-    } */
     .program .inner .list .item_wrap .item a {
         gap: 15px;
     }
-
     .program .inner .list .item_wrap .item a .item_info ul {
         flex-direction: column;
     }
@@ -1063,28 +943,26 @@ main .inner {
         width: 31.88%;
         height: auto;
     }
-
     .recipe .list .item_wrap .item {
         width: 100%;
         max-height: 287px;
         height: 29.89vw;
     }
-
     .recipe .list .item_wrap .item:nth-child(2)~.item {
         display: none;
     }
-}
-
-/* 960 */
+}/* 960 */
 
 
 @media screen and (max-width:767px) {
     .main_visual .mainSwiper .swiper-wrapper .swiper-slide {
         width: calc(100% - 60px);
         height: 43.58vw;
-    }.main_visual .mainSwiper .swiper-btn {
+    }
+    .main_visual .mainSwiper .swiper-btn {
         width: calc(100% - 60px);
     }
+
     .program .inner .title_btn {
         width: 100%;
     }
@@ -1100,6 +978,7 @@ main .inner {
     .program .inner .list .item_wrap .item a .item_info ul {
         display: none;
     }
+
     .recipe .list {
         flex-direction: column;
         gap: 11vw;
@@ -1107,7 +986,6 @@ main .inner {
     .recipe .list .recipe_slide {
         width: 100%;
         height: 92vw;
-        margin-bottom: 
     }
     .recipe .list .recipe_slide::before {
         height: 70px;
@@ -1146,6 +1024,7 @@ main .inner {
         max-height: 343px;
         height: 44.71vw;
     }
+
     .news .title {
         display: block;
         margin-bottom: 20px;
@@ -1170,7 +1049,6 @@ main .inner {
     }
     .main_title .inner .title_text img {
         width: 15.75rem;
-        /* 126 / 8 */
     }
     .main_title .inner .main_btn a {
         gap: 7px;
@@ -1179,12 +1057,9 @@ main .inner {
         font-size: 1.87rem;
     }
     .main_title .inner .main_btn a img {
-        /* width: 20px;
-        height: 20px; */
         width: 2.5rem;
         height: 2.5rem;
     }
-
     .main_visual .swiper-button-next, .main_visual .swiper-button-prev {
         width: 30px;
         height: 30px;
@@ -1194,9 +1069,7 @@ main .inner {
     .main_visual .swiper-button-prev {
         left: -15px;
     }
-    .news .news_list li {
-        /* padding: 20px 30px; */
-    }
+
     .news .news_list li>a {
         flex-direction: column;
         gap: 10px;
@@ -1211,19 +1084,23 @@ main .inner {
     }
 
 }/* 640 */
+
+
 @media screen and (max-width:605px) {
     .footer .address li::before {
         display: none;
     }
-} 
+}/* 605 */
+
+
 @media screen and (max-width:480px) {
     html {
         font-size: 37.5%;
-        /* 6px */
     }
     main .inner {
         width: calc(100% - 30px);
     }
+
     .header .inner {
         width: calc(100% - 30px);
     }
@@ -1233,6 +1110,7 @@ main .inner {
     .header .inner .header_menu strong {
         display: none;
     }
+
     .main_title .inner {
         margin: 7.33rem auto 0;
     }
@@ -1249,6 +1127,7 @@ main .inner {
         width: 3.33rem;
         height: 3.33rem;
     }
+
     .main_visual .mainSwiper .swiper-wrapper .swiper-slide {
         width: calc(100% - 30px);
         height: 43.58vw;
@@ -1262,6 +1141,7 @@ main .inner {
     .main_visual .swiper-pagination-bullet-active {
         width: 20px;
     }
+
     .title p {
         font-size: 2.33rem;
     }
@@ -1364,13 +1244,16 @@ main .inner {
     }
 }/* 480 */
 
+
 @media screen and (max-width:390px) {
     .header .inner .logo a strong {
         font-size: 2.66rem;
     }
+
     .main_title .inner .title_text h2 {
         font-size: 4.16rem;
     }
+
     .program .inner .list .item_wrap {
         gap: 2.5rem;
     }
@@ -1379,7 +1262,8 @@ main .inner {
         width: 60px;
         height: 60px;
     }
+
     .recipe .list .item_wrap .item a h4 {
         padding-bottom: 15px;
     }
-}
+}/* 390 */
